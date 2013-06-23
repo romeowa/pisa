@@ -25,6 +25,7 @@
     <SilverlightAppEntry>Pisa.App</SilverlightAppEntry>
     <ValidateXaml>true</ValidateXaml>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <ExpressionBlendVersion>5.0.40218.0</ExpressionBlendVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -56,6 +57,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\MvvmLightLibs.4.1.27.0\lib\sl4-wp71\GalaSoft.MvvmLight.WP71.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Expression.Interactions" />
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\packages\WPToolkit.4.2013.06.11\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
@@ -64,6 +66,7 @@
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.4.1.27.0\lib\sl4-wp71\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
@@ -78,19 +81,33 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Control\CameraControl.xaml.cs">
+      <DependentUpon>CameraControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\InputView.xaml.cs">
+      <DependentUpon>InputView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="Control\CameraControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InputView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,6 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\AppBar\appbar.add.rest.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Background.png">
