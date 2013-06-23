@@ -10,7 +10,7 @@ using Microsoft.Phone.Shell;
 
 namespace Pisa.Control
 {
-	public partial class CameraControl : PhoneApplicationPage
+	public partial class CameraControl : UserControl
 	{
 		public CameraControl()
 		{
