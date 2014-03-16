@@ -14,7 +14,7 @@
     		<Rectangle.Fill>
     			<VideoBrush x:Name="VideoViewfinderBrush" Stretch="UniformToFill">
     				<VideoBrush.RelativeTransform>
-    					<CompositeTransform x:Name="VideoViewfinderTransform" CenterX="0.5" CenterY="0.5" />
+    					<CompositeTransform x:Name="VideoViewfinderTransform" CenterX="0.5" CenterY="0.5"/>
     				</VideoBrush.RelativeTransform>
     			</VideoBrush>
     		</Rectangle.Fill>

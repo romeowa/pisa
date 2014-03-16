@@ -23,7 +23,7 @@
 	</phone:PhoneApplicationPage.ApplicationBar>
 	<ScrollViewer>
 		<StackPanel x:Name="LayoutRoot" Background="Transparent">
-			<Control:CameraControl Height="300"/>
+			<Control:CameraControl Width="400" Height="400"/>
 			<toolkit:DatePicker/>
 	   
 			<toolkit:ListPicker>
